@@ -14,7 +14,7 @@ Ljubimac <- R6Class("Ljubimac",
     self$datum_pregleda <- datum_pregleda
   },
 
-  izracunaj_godine <- function(god_rodjenja) {
+  izracunaj_godine = function(god_rodjenja) {
     danas <- Sys.Date()
     trenutna_godina <- as.integer(format(danas, "%Y"))
     trenutni_mjesec <- as.integer(format(danas, "%m"))
@@ -28,15 +28,16 @@ Ljubimac <- R6Class("Ljubimac",
     return(godine)
   },
   
-  pozdrav_ljubimac <- function(vrsta, ime) {
+  pozdrav_ljubimac= function(vrsta, ime) {
     poruka <- sprintf("Pozdrav od %s po imenu %s!", vrsta, ime)
     return(poruka)
   },
   
-  dodaj_posjetu <- function(p) {
+  dodaj_posjetu = function(p) {
     danas <- Sys.Date()
     Ljubimac$datum_pregleda <- append(list(danas), Ljubimac$datum_pregleda)
     return(p)
-  },
+  }
   
   )
+)
