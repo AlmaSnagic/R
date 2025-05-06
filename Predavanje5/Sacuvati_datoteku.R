@@ -1,0 +1,1 @@
+write.csv(df, "C:/Users/Python/Downloads/titanic_for_r.cvs")
